@@ -1,0 +1,58 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+.col-cont {
+    padding: 1rem;
+}
+label {
+    padding: 2%;
+}
+.btnAddDish {
+    margin-right: 10px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 0px 1px rgba(0,0,0,1);
+}
+.btnAddDish:focus {
+    box-shadow: none;
+    outline: none;
+}
+.form-group span {
+    color: red;
+}
+.mainContainer {
+    padding: 3%;
+}
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    padding: 3%;
+}
+.btnDelete button{
+    color: black;
+    font-weight: bold;
+    background-color: lightcoral;
+    border: 1px solid black;
+    box-shadow: 1px 1px 0px 1px rgba(0,0,0,1);
+    width: 100px;
+}
+.btnEdit a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    background-color: lightskyblue;
+    border: 1px solid black;
+    box-shadow: 1px 1px 0px 1px rgba(0,0,0,1);
+    padding: 5px 50px;
+    width: 100px;
+}
+.btnUpdate{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    box-shadow: 1px 1px 0px 1px rgba(0,0,0,1);
+    text-align: center;
+    width: 100px;
+}

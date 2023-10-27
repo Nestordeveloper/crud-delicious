@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "New Dish";
+}
+@model Dish;
+<link rel="stylesheet" href="~/css/styles.css">
+<div class="text-center">
+    <h1>Add a new Dish!</h1>
+</div>
+<div class="text-center">
+    <a asp-controller="Home" asp-action="Index">Home</a>
+    <a asp-controller="Home" asp-action="Dishes">Add a Dish</a>
+</div>
+<form asp-action="Create" asp-controller="dishes" method="post">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group col-cont">
+                <label asp-for="Chef">Chef's Name</label>
+                <input asp-for="Chef" class="form-control" type="text">
+                <span asp-validation-for="Chef"></span>
+            </div>
+            <div class="form-group col-cont">
+                <label asp-for="Name">Name of Dish</label>
+                <input asp-for="Name" class="form-control" type="text">
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group col-cont">
+                <label asp-for="Calories"># of Calories</label>
+                <input asp-for="Calories" class="form-control" type="number" min="0" default="0">
+                <span asp-validation-for="Calories"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group col-cont">
+                <label asp-for="Tastiness">Tastiness</label>
+                <select asp-for="Tastiness" class="form-select" name="Tastiness" id="Tasty">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span asp-validation-for="Tastiness"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group col-cont">
+                <label asp-for="Description">Description</label>
+                <textarea asp-for="Description" class="form-control" name="Description" id="Desc"></textarea>
+                <span asp-validation-for="Description"></span>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="btn btnAddDish">Add Dish</button>
+            </div>
+        </div>
+    </div>
+</form>

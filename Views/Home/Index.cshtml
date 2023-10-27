@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Dish;
+<link rel="stylesheet" href="~/css/styles.css">
+<div class="text-center">
+    <h1>Welcome to CRUDelicious</h1>
+</div>
+<div class="text-center">
+    <a asp-controller="Home" asp-action="Index">Home</a>
+    <a asp-controller="Home" asp-action="Dishes">Add a Dish</a>
+</div>
+<div>
+    <div class="text-left">
+        <h2>Check out some recent dishes</h2>
+    </div>
+    <div>
+        <ul>
+            @foreach (var dish in ViewBag.AllDishes)
+            {
+                <li>
+                    <a asp-controller="dishes" asp-action="ShowDish" asp-route-id="@dish.DishId">@dish.Name</a> -
+                    by
+                    @dish.Chef
+                </li>
+            }
+        </ul>
+    </div>
+</div>
